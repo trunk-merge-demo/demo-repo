@@ -13,7 +13,7 @@ pipeline {
     /* Cleanup workspace */
     post {
        success {
-           githubNotify description: 'This is a shorted example',  status: 'SUCCESS', credentialsId: '3b08e5f7-6163-42d9-b329-42a631b4777c', account: 'gnalh', context: 'jenkins merge ci', repo: 'test-repo', sha: "${GIT_COMMIT}", targetUrl: "http://20.245.236.242:8080/job/${JOB_NAME}/${BUILD_NUMBER}"
+           githubNotify description: 'This is a shorted example',  status: 'SUCCESS', credentialsId: 'trunk-staging', account: 'gnalh', context: 'jenkins merge ci', repo: 'test-repo', sha: "${GIT_COMMIT}", targetUrl: "http://20.245.236.242:8080/job/${JOB_NAME}/${BUILD_NUMBER}"
        }
        always {
            deleteDir()
